@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yudhistore - Top Up Game Murah & Terpercaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .game-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(#1e293b, #1e293b) padding-box,
+                        linear-gradient(45deg, #6366f1, #8b5cf6) border-box;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.25);
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(to right, #25D366, #128C7E);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-slate-900 bg-opacity-80 backdrop-blur-md fixed w-full z-50 border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold gradient-text bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">YUDHISTORE</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-800 transition">Beranda</a>
+                        <a href="#games" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-800 transition">Game</a>
+                        <a href="#cara-bayar" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-800 transition">Cara Bayar</a>
+                        <a href="#kontak" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-800 transition">Kontak</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Top Up Game <span class="gradient-text bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Murah & Terpercaya</span></h1>
+                    <p class="text-lg text-gray-300 mb-8">Dapatkan diamond dan koin game favoritmu dengan harga terbaik. Proses cepat, aman, dan pastinya terpercaya!</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#games" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition transform hover:-translate-y-1">Lihat Game</a>
+                        <a href="#cara-bayar" class="px-6 py-3 bg-transparent border border-purple-500 text-purple-300 font-semibold rounded-lg hover:bg-purple-900 transition">Cara Pembayaran</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center float-animation">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-20 blur-xl"></div>
+                        <img src="https://placeholder-image-service.onrender.com/image/320x320?prompt=Modern gaming character holding diamond and coin rewards with futuristic background&id=hero-img-1" alt="Gaming character holding diamond and coin rewards with futuristic neon background" class="relative z-10 w-full h-full object-contain rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Pilih Game Favoritmu</h2>
+                <p class="text-lg text-gray-300">Top up diamond dan koin dengan mudah untuk game-game populer</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Free Fire Card -->
+                <div class="game-card rounded-xl p-6 shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
+                            <img src="https://placeholder-image-service.onrender.com/image/64x64?prompt=Free Fire game logo with flame effects and bold typography&id=ff-logo-1" alt="Free Fire game logo with flame effects and bold orange typography" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Free Fire</h3>
+                            <p class="text-gray-300">Top Up Diamond</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Dapatkan diamond FF dengan proses instan dan harga terbaik. Bermain lebih seru dengan skin dan item eksklusif!</p>
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">5 Diamond</p>
+                            <p class="font-bold text-white">Rp 1.000</p>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">50 Diamond</p>
+                            <p class="font-bold text-white">Rp 10.000</p>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">100 Diamond</p>
+                            <p class="font-bold text-white">Rp 20.000</p>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">500 Diamond</p>
+                            <p class="font-bold text-white">Rp 100.000</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/62882005184293?text=Halo,%20saya%20mau%20top%20up%20Free%20Fire" class="whatsapp-btn w-full py-3 rounded-lg text-white font-semibold text-center block pulse-animation">
+                        Top Up Sekarang
+                    </a>
+                </div>
+                
+                <!-- Mobile Legends Card -->
+                <div class="game-card rounded-xl p-6 shadow-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-lg overflow-hidden mr-4">
+                            <img src="https://placeholder-image-service.onrender.com/image/64x64?prompt=Mobile Legends game logo with medieval fantasy design and glowing effects&id=ml-logo-1" alt="Mobile Legends game logo with medieval fantasy design and glowing blue effects" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Mobile Legends</h3>
+                            <p class="text-gray-300">Top Up Diamond</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">Isi diamond ML dengan mudah dan cepat. Dapatkan skin hero epic dan berbagai item menarik lainnya!</p>
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">15 Diamond</p>
+                            <p class="font-bold text-white">Rp 5.000</p>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">50 Diamond</p>
+                            <p class="font-bold text-white">Rp 15.000</p>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">100 Diamond</p>
+                            <p class="font-bold text-white">Rp 30.000</p>
+                        </div>
+                        <div class="bg-slate-700 rounded-lg p-3 text-center">
+                            <p class="text-sm text-gray-300">500 Diamond</p>
+                            <p class="font-bold text-white">Rp 150.000</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/62882005184293?text=Halo,%20saya%20mau%20top%20up%20Mobile%20Legends" class="whatsapp-btn w-full py-3 rounded-lg text-white font-semibold text-center block pulse-animation">
+                        Top Up Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Process -->
+    <section id="cara-bayar" class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Cara Pembayaran Mudah</h2>
+                <p class="text-lg text-gray-300">Hanya 3 langkah sederhana untuk top up game kamu</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 gradient-bg rounded-full flex items-center justify-center text-white text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Pilih Game & Nominal</h3>
+                    <p class="text-gray-300">Pilih game yang ingin kamu top up dan tentukan jumlah diamond/koin yang diinginkan</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 gradient-bg rounded-full flex items-center justify-center text-white text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Hubungi WhatsApp</h3>
+                    <p class="text-gray-300">Kirim pesan ke WhatsApp kami dengan detail pesanan dan ID game kamu</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 gradient-bg rounded-full flex items-center justify-center text-white text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Konfirmasi & Proses</h3>
+                    <p class="text-gray-300">Lakukan pembayaran dan diamond akan langsung masuk ke akun game kamu</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-slate-800 rounded-xl p-6 max-w-3xl mx-auto">
+                <h3 class="text-xl font-semibold text-white mb-4 text-center">Kirim format berikut via WhatsApp:</h3>
+                <div class="bg-slate-700 rounded-lg p-4 mb-4">
+                    <p class="text-gray-300 font-mono text-sm">Nama: [Nama Lengkap]</p>
+                    <p class="text-gray-300 font-mono text-sm">Game: [Free Fire/Mobile Legends]</p>
+                    <p class="text-gray-300 font-mono text-sm">ID: [ID Game]</p>
+                    <p class="text-gray-300 font-mono text-sm">Server: [Server Game]</p>
+                    <p class="text-gray-300 font-mono text-sm">Nominal: [Jumlah Diamond]</p>
+                </div>
+                <div class="text-center">
+                    <a href="https://wa.me/62882005184293?text=Halo,%20saya%20mau%20top%20up%20game" class="whatsapp-btn inline-block px-8 py-3 rounded-lg text-white font-semibold">
+                        Hubungi WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Hubungi Kami</h2>
+                <p class="text-lg text-gray-300">Butuh bantuan atau ada pertanyaan? Tim kami siap membantu 24/7</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-slate-700 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Informasi Kontak</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-300">WhatsApp</p>
+                                <p class="text-white font-semibold">+62 882-0051-84293</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-300">Email</p>
+                                <p class="text-white font-semibold">aryaaksa982@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-700 rounded-xl p-6">
+                    <h3 class="text-xl font-semibold text-white mb-4">Jam Operasional</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Senin - Jumat</span>
+                            <span class="text-white font-semibold">24 Jam</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-300">Sabtu - Minggu</span>
+                            <span class="text-white font-semibold">24 Jam</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-4">Metode Pembayaran</h3>
+                    <div class="flex space-x-3">
+                        <div class="w-10 h-10 bg-white rounded flex items-center justify-center">
+                            <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=Bank transfer payment icon with blue color&id=bank-icon-1" alt="Bank transfer payment icon with blue color and banking symbols" class="w-6 h-6 object-contain">
+                        </div>
+                        <div class="w-10 h-10 bg-white rounded flex items-center justify-center">
+                            <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=E-wallet payment icon with modern design&id=ewallet-icon-1" alt="E-wallet payment icon with modern digital design and orange accents" class="w-6 h-6 object-contain">
+                        </div>
+                        <div class="w-10 h-10 bg-white rounded flex items-center justify-center">
+                            <img src="https://placeholder-image-service.onrender.com/image/24x24?prompt=QR code payment icon with black and white pattern&id=qr-icon-1" alt="QR code payment icon with distinctive black and white pattern" class="w-6 h-6 object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8 px-4 sm:px-6 lg:px-8 border-t border-slate-700">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <span class="text-xl font-bold gradient-text bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">YUDHISTORE</span>
+                    <p class="text-gray-400 text-sm mt-1">Top Up Game Murah & Terpercaya</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-gray-400 hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.
+
+🎨 **Generating images based on descriptions...**
+
+✅ **Images generated successfully! Here's your updated content:**
+
+
